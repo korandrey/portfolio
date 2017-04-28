@@ -1,50 +1,55 @@
 extends ../layout
 
-section.section.hero
-    ul.socials
-        each item in ['vk', 'gh', 'in']
-            li.socials__item
-                a(href="" class=`socials__link socsials__link_${item}`)
-    a(href="").hamburger
-    a(href="").down-arrow
-    .hero__title
-        img(src="../../", alt="").section-title
-        .user.hero__user-block
-            .user__photo
-            .user__name
-            .user__desc
-section.section.about
-    .about__left
-        svg.triagle.triagle_fill_white
-        .title.about__section-title
-            | Обо мне
-        .user-about
-            .user-about__picture
-            .user-about__title.subtitle
-                | Кто я
-            .user-about__text
-                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-    .about__right
-        svg.triagle.triagle_fill_beige
+block title
+    | Главная Страница
 
-        .about-data
-            .about-data__description.about-user-info
-                .about-user-info__title
-                    .subtitle Чем я могу быть полезен
-                .about-user-info__text
-                    p Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-            .about-data__content
-                ul.skills
-                    each skill in ['Frontend', 'Backend', 'WorkFlow']
-                        li.skills__item
-                            .skill-section
-                                .skill-section__title= skill
-                                ul.skill-section__list
-                                    each skillName in ['HTML5','CSS3', 'jQuery']
-                                        li.skills-section__item
-                                            .skill
-                                                svg.skill__circle
-                                                    .skill__name= skillName
+block content
+    section.section.hero
+        .hero___bg
+            img(src="assets/img/bg-about.png" alt="").hero__bg-img
 
-section.section.map
+        ul.socials
+            each item in ['vk', 'gh', 'in']
+                li.socials__item
+                    a(href="" class= `socials__link socsials__link_${item}`)
+        a(href="").hamburger
+        a(href="").down-arrow
+        .hero__title
+            img(src="../../", alt="").section-title
+            .user.hero__user-block
+                .user__photo
+                .user__name
+                .user__desc
+    section.section.about
+        .about__left
+            svg.triagle.triagle_fill_white
+            .title.about__section-title
+                | Обо мне
+            .user-about
+                .user-about__picture
+                .user-about__title.subtitle
+                    | Кто я
+                .user-about__text
+                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+        .about__right
+            svg.triagle.triagle_fill_beige
+
+            .about-data
+                .about-data__description.about-user-info
+                    .about-user-info__title
+                        .subtitle Чем я могу быть полезен
+                    .about-user-info__text
+                        p Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+                .about-data__content
+                    ul.skills
+                        each skill in ['Frontend', 'Backend', 'WorkFlow']
+                            li.skills__item
+                                .skill-section
+                                    .skill-section__title= skill
+                                        ul.skill-section__list
+                                            each skillName in ['HTML5', 'CSS3', 'jQuery']
+                                                li.skills-section__item
+                                                    .skill
+                                                        svg.skill__circle
+                                                            .skill__name= skillName
