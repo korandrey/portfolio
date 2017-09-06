@@ -8,17 +8,16 @@
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-
   $margin : 40px;
 
-  &:after, &:before {
-    content: "";
-    display: block;
-    @include centered(y);
-    background: rgba($main-font-color, .2);
-    width: 22px;
-    height: 5px;
-  }
+  //&:after, &:before {
+  //  content: "";
+  //  display: block;
+  //  @include centered(y);
+  //  background: rgba($main-font-color, .2);
+  //  width: 22px;
+  //  height: 5px;
+  //}
 
   &:after {
     right: $margin;
@@ -27,5 +26,39 @@
   &:before {
     left: $margin;
   }
+}
+
+.subtitle{
+  font-family: Sansus-Webissimo-Regular;
+
+    color: $main-font-color;
+    font-size: 35px;
+    //@include bernier();
+    padding: 10px 60px;
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    $margin : 40px;
+
+    //&:after, &:before {
+    //  content: "";
+    //  display: block;
+    //  @include centered(y);
+    //  background: rgba($main-font-color, .2);
+    //  width: 22px;
+    //  height: 5px;
+    //}
+
+    &:after {
+      right: $margin;
+    }
+
+    &:before {
+      left: $margin;
+    }
+  float: right;
 }
 

@@ -1,0 +1,31 @@
+extends ../layout
+
+block title
+    | Приветствие
+
+block content
+
+    .auth-container
+        .hero___bg
+            #trailer.is_overlay
+                video#video(width='100%', height='auto', autoplay='autoplay', loop='loop', preload='auto')
+                    source(src='assets/img/night.mp4')
+                    source(src='book.webm', type='video/webm')
+            #mountains-blog.is_overlay
+                img(src="assets/img/gory.png" alt="").gory
+        .auth
+            .auth__info
+                .user
+                    .user__photo
+                        img(src="assets/img/user-photo-about.png", alt="").user__avatar
+                    .user__name Андрей Коршунов
+                ul.socials
+                    each icon in ['vk', 'github', 'in']
+                        li.socials__item
+                            a(href="#").socials__link
+                                svg.socials__icon
+                                    use(xlink:href=`assets/img/sprite/sprite.svg#${icon}`)
+            .auth__btns
+                a(href="works.html").auth__btn Мои работы
+                a(href="index.html").auth__btn Обо мне
+                a(href="#").auth__btn Блог

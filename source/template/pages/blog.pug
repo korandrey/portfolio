@@ -1,0 +1,71 @@
+extends ../layout
+
+block title
+    | Главная Страница
+
+block content
+    include ../parts/blog-heading
+    .wrapper
+    .container
+        .about__left.works__triangles
+            svg(
+            viewBox="0 0 1000 100"
+            preserveAspectRatio="none"
+            class="triangle triangle_fill_white_blog about__triangles")
+                polygon(points="0,0 0,100 500,100")
+        .about__right.works__triangles
+            svg(
+            viewBox="0 0 1000 100"
+            preserveAspectRatio="none"
+            class="triangle triangle_fill_white_blog about__triangles")
+                polygon(points="1000,100 500,100 1000,0")
+        svg.blog__content_list-icon
+            use(xlink:href='assets/img/sprite.svg#menu-blog')
+        .blog__content_left
+            ul.blog__content_list
+                li.blog__content_list-item.active-link
+                    a.list-item_link(href='#article_1') Самое важное в SASS
+                li.blog__content_list-item
+                    a.list-item_link(href='#article_2') Приемы в верстке, без которых не обходится ни одни сайт
+                li.blog__content_list-item
+                    a.list-item_link(href='#article_3') Самый необходимых набор Gulp плагинов
+        .blog__content_right
+            #article_1.blog__content-item
+                h3.item__title Самое важное в SASS
+                span.item__date 21 апреля 2017
+                .item
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+                    pre.
+                        \n// вернет сумму второго аргумента и двойки в степени
+                        числового выражения первого аргумента
+                        var g = (a, b) => {
+                           let m = Math.pow(2, parseInt(a));
+                           return b + m;
+                        }
+            #article_2.blog__content-item
+                h3.item__title Приемы в верстке, без которых не обходится ни одни сайт
+                span.item__date 21 апреля 2017
+                .item
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+            #article_3.blog__content-item
+                h3.item__title Самый необходимых набор Gulp плагинов
+                span.item__date 21 апреля 2017
+                .item
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea nulla, est sed, animi voluptas, distinctio, culpa voluptatum repudiandae esse a omnis. Suscipit nesciunt ipsum quaerat soluta qui dignissimos incidunt.
+
+    include ../parts/footer

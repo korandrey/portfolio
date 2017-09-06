@@ -1,21 +1,49 @@
 footer.footer
-    .footer__row.footer__row_top
-        .footer__left
-            ul.nav-menu
-                each link in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
-                    li.nav-menu__item
-                        a(href="#").nav-menu__link= link
-        .footer__right
-            ul.socials.socials_footer
+    .footer-top
+        .footer-top__column
+            p.column__text
+                | Этот сайт сделал я в рамках обучения
+                | в Школе онлайн образования LoftSchool
+        .footer-top__column
+            nav.navigation.navigation__footer
+                ul.navigation__list
+                    li.navigation__item
+                        a.navigation__link(href='works.html', target='_self') Мои работы
+                    li.navigation__item
+                        a.navigation__link(href='blog.html', target='_self') Блог
+                    li.navigation__item
+                        a.navigation__link(href='index.html', target='_self') Обо мне
+                    li.navigation__item
+                        a.navigation__link(href='auth.html', target='_self') Авторизация
+
+            ul.socials.socials__footer
                 -
                     icons = ['vk', 'github', 'in'];
                 each icon in icons
-                    li.socials__item
-                        a(href="#").socials__link
-                            svg.socials__icon
-                                use(xlink:href=`img/sprite/sprite.svg#${icon}`)
-    .footer__row
-        .footer__left
-            .footer__about Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        .footer__right
-            .footer__about-user-name © Владимир Астахов | создано с любовью в LoftSchool | 2016
+                    li.social__item
+                        a(href="#").social__link
+                            svg.social__icon
+                                use(xlink:href=`assets/img/sprite/sprite.svg#${icon}`)
+            //ul.socials.socials__footer
+            //    li.social__item
+            //        a.social__link(href='#', target='_blank')
+            //            svg.social__icon
+            //                use(xlink:href='assets/img/sprite.svg#vk')
+            //    li.social__item
+            //        a.social__link(href='#', target='_blank')
+            //            svg.social__icon
+            //                use(xlink:href='assets/img/sprite.svg#github')
+            //    li.social__item
+            //        a.social__link(href='#', target='_blank')
+            //            svg.social__icon
+            //                use(xlink:href='assets/img/sprite.svg#in')
+        .footer-top__column
+            .column__text
+                .quote-text
+                    | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                .quote-author - Martin Golding
+    .footer-bottom
+        .footer-bottom__text
+            span.footer-bottom__text-name © Андрей Коршунов
+            span.footer-bottom__text-love Создано с любовью в LoftSchool
+            span.footer-bottom__text-year 2017

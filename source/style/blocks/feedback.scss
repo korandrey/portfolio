@@ -1,0 +1,267 @@
+.feedback {
+  height: 1356px;
+  width: 100%;
+  position: relative;
+
+  //@include laptops {
+  //  height: 1400px;
+  //}
+
+  @include phones {
+    height: 1750px;
+  }
+}
+
+.feedback__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 1350px;
+  max-width: 2000px;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.feedback-title {
+  height: 220px;
+  width: $common-width;
+  position: relative;
+  z-index: 5;
+}
+
+.title-wrapper__feedback {
+  height: 180px;
+  width: 350px;
+  text-align: center;
+  line-height: 1.0;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 175px);
+
+  & .title-text {
+    top: 20%;
+  }
+
+  & .title__logo {
+    top: -20px;
+    left: -15%;
+  }
+
+  @include phones {
+    & .title__logo {
+      width: 110%;
+      left: -5%;
+    }
+  }
+}
+
+.feedback__review {
+  width: 800px;
+  min-height: 280px;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 5;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__review_left,
+.feedback__review_right {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+
+  @include phones {
+    float: none;
+    width: 100vw;
+  }
+}
+
+.review__pic {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.user__pic-file_left {
+  width: 80px;
+  height: 120%;
+}
+
+.user__pic-file_right {
+  width: $common-width;
+  height: 100%;
+}
+
+.user__review,
+.user__occupation {
+  display: inline-block;
+  font-family: 'Roboto-Italic';
+  color: $white;
+}
+
+.user__review {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.review-name {
+  font-size: 16px;
+  font-family: 'Roboto-Italic';
+  color: $white;
+  margin-bottom: 5px;
+}
+
+.user__occupation {
+  font-size: 15px;
+  color: $white;
+}
+
+.wrapper-review {
+  position: relative;
+  z-index: 5;
+  width: 380px;
+  height: 460px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.review__form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #33322e;
+  opacity:0.5;
+  background-position: center center;
+  background-size: 900px;
+  filter: blur(20px);
+}
+
+.review__form-content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+}
+
+.input-name,
+.input-email {
+  margin-bottom: 20px;
+}
+.input-name,
+.input-email,
+.textarea{
+  background: #413d43;
+  opacity: 0.5;
+}
+
+.review__form_title {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.textarea {
+  height: 140px;
+  resize: none;
+  margin-bottom: 14px;
+
+  @include tablets {
+    margin-bottom: 15px;
+  }
+
+  @include phones {
+    margin-bottom: 27px;
+  }
+
+  @include min-size {
+    margin-bottom: 31px;
+  }
+}
+
+.pre {
+  width: 90%;
+}
+
+.button-block {
+  width: $common-width;
+  width: 380px;
+  height: 45px;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+.rec-button {
+  float: left;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #004cd1;
+  }
+}
+
+.button-submit,
+.button-reset {
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
+
+  &:first-child {
+    border-right: 2px solid #a1bc9c;
+  }
+}
+
+.arrow__up_feedback {
+  position: absolute;
+  bottom: 250px;
+  left: calc(50% - 15px);
+  z-index: 5;
+
+  //@include laptops {
+  //  bottom: 300px;
+  //}
+
+  @include phones {
+    bottom: 400px;
+  }
+
+  @include min-size {
+    bottom: 380px;
+  }
+
+}
+.title-block__form-content{
+  font-size: 30px;
+  font-family: 'Sansus-Webissimo-Regular';
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 20px;
+    border-bottom: 3px solid white;
+    margin: 0 auto;
+  }
+}
