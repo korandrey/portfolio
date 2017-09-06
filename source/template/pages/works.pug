@@ -1,0 +1,139 @@
+extends ../layout
+
+block title
+    | Мои Работы
+
+block content
+    include ../parts/hero
+        .triangle__works
+        svg.works-head__triangle_left.works-head__triangle(viewbox='0 0 1000 100', preserveaspectratio='none')
+            polygon(points='0,0 0,100 1000,100 1000,55')
+        svg.works-head__triangle_right.works-head__triangle(viewbox='0 0 1000 100', preserveaspectratio='none')
+            polygon(points='0,100 1000,100 1000,0 0,55')
+        section.section.works-head
+            .title-wrapper.title-wrapper__works
+                .title-text Мои работы
+                .title-img(style="background-image: url('assets/img/stars2.png')")
+    .wrapper
+
+        section.section
+            .works__block
+                .works__desc
+                    .works__desc-block
+                        ul.desc-block__list
+                            li.desc-block__item.slider-item.active
+                                h3.title-block.works__desc_title Сайт школы онлайн образования 1
+                                p.works__desc_tools html, css, javascript
+                                a.oval-button.oval-button__works(href='https://loftschool.com/')
+                                    svg.link-icon
+                                        use(xlink:href='assets/img/sprite.svg#link')
+                                    span.link-text Посмотреть сайт
+                            li.desc-block__item.slider-item
+                                h3.title-block.works__desc_title Сайт школы онлайн образования 2
+                                p.works__desc_tools html, css, javascript
+                                a.oval-button.oval-button__works(href='https://loftschool.com/')
+                                    svg.link-icon
+                                        use(xlink:href='assets/img/sprite.svg#link')
+                                    span.link-text Посмотреть сайт
+                            li.desc-block__item.slider-item
+                                h3.title-block.works__desc_title Сайт школы онлайн образования 3
+                                p.works__desc_tools html, css, javascript
+                                a.oval-button.oval-button__works(href='https://loftschool.com/')
+                                    svg.link-icon
+                                        use(xlink:href='assets/img/sprite.svg#link')
+                                    span.link-text Посмотреть сайт
+                            li.desc-block__item.slider-item
+                                h3.title-block.works__desc_title Сайт школы онлайн образования 4
+                                p.works__desc_tools html, css, javascript
+                                a.oval-button.oval-button__works(href='https://loftschool.com/')
+                                    svg.link-icon
+                                        use(xlink:href='assets/img/sprite.svg#link')
+                                    span.link-text Посмотреть сайт
+                .work-item__current
+                    .current-block
+                        ul.current-block__list
+                            li.current-block__item.slider-item.active
+                                img(src='/assets/img/work-1.png')
+                            li.current-block__item.slider-item
+                                img(src='/assets/img/work-2.png')
+                            li.current-block__item.slider-item
+                                img(src='/assets/img/work-3.png')
+                            li.current-block__item.slider-item
+                                img(src='/assets/img/work-4.png')
+                .work-item__preview
+                    .work-item__prev
+                        ul.prev-block__list
+                            li.prev-block__item.slider-item.active
+                                .prev-block__item-pic
+                                    img(src='/assets/img/work-4.png')
+                            li.prev-block__item.slider-item
+                                .prev-block__item-pic
+                                    img(src='/assets/img/work-1.png')
+                            li.prev-block__item.slider-item
+                                .prev-block__item-pic
+                                    img(src='/assets/img/work-2.png')
+                            li.prev-block__item.slider-item
+                                .prev-block__item-pic
+                                    img(src='/assets/img/work-3.png')
+                        .work-item__fill_prev
+                        .arrow.arrow__down.works__arrow
+                            a.arrow-button(href='#')
+                                i.fa.fa-chevron-down.fa-3x.slider__button(aria-hidden='true')
+                    .work-item__next
+                        ul.next-block__list
+                            li.next-block__item.slider-item.active
+                                .next-block__item-pic
+                                    img(src='/assets/img/work-2.png')
+                            li.next-block__item.slider-item
+                                .next-block__item-pic
+                                    img(src='/assets/img/work-3.png')
+                            li.next-block__item.slider-item
+                                .next-block__item-pic
+                                    img(src='/assets/img/work-4.png')
+                            li.next-block__item.slider-item
+                                .next-block__item-pic
+                                    img(src='/assets/img/work-1.png')
+                        .work-item__fill_next
+                        .arrow.arrow__up.works__arrow
+                            a.arrow-button(href='#')
+                                i.fa.fa-chevron-up.fa-3x.slider__button(aria-hidden='true')
+        section.section.feedback
+            .feedback__bg
+                img(src='/assets/img/bg-section-feedback.png')
+            .feedback-title
+                .title-wrapper.title-wrapper__feedback
+                    .title-text Что обо мне говорят
+                    .title-img(style="background-image: url('assets/img/stars2.png')")
+            .feedback__review.clearfix
+                .feedback__review_left
+                    .user__pic.review__pic
+                        img.user__pic-file_left(src='assets/img/dimaKovalchuk.png', alt='Дмитрий Ковальчук')
+                    .user__review
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde cum porro aliquam, harum minima quaerat blanditiis error modi quidem animi hic explicabo deserunt cumque impedit dolorem recusandae quibusdam tempore repellendus?
+                    .user__about
+                        .user__name.review-name Ковальчук Дмитрий
+                        .user__occupation - основатель LoftSchool
+                .feedback__review_right
+                    .user__pic.review__pic
+                        img.user__pic-file_right(src='assets/img/sabancev.png', alt='Владимир Сабанцев')
+                    .user__review
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde cum porro aliquam, harum minima quaerat blanditiis error modi quidem animi hic explicabo deserunt cumque impedit dolorem recusandae quibusdam tempore repellendus?
+                    .user__about
+                        .user__name.review-name Сабанцев Владимир
+                        .user__occupation - Преподаватель
+            .wrapper-review
+                .review__form
+                form.review__form-content
+                    h3.review__form_title.title-block__form-content Связаться со мной
+                    input.input-name.form-field(name='name', type='text', placeholder='Имя')
+                    input.input-email.form-field(name='email', type='text', placeholder='Email')
+                    textarea.textarea.form-field(name='comment', placeholder='Ваше сообщение')
+                    .button-block.clearfix
+                        button.rec-button.button-submit(type='submit', value='Отправить') Отправить
+                        button.rec-button.button-reset(type='reset', value='Очистить') Очистить
+            .arrow.arrow__up_feedback
+                a.arrow-button(href='#')
+                    svg.arrow__icon
+                        use(xlink:href='assets/img/sprite.svg#arrow-up')
+
+        include ../parts/footer

@@ -1,0 +1,44 @@
+// растягиваем блоки во всю ширину экрана
+$common-width: 100%;
+
+// основные цвета, используемые в проекте
+$white: #d8dbd5;
+$light-green: #6c9c5a;
+$green: #4e8839;
+$light-gray: #566358;
+$gray: #373e42;
+$link-color: #6da3bd;
+$blue: #0548be;
+
+$white : #efeee9;
+$beige : #eeebdf;
+$main-font-color : #373e42;
+$green: #10c1a8;
+$gray: #455a64;
+$light-beige: #f9f8f0;
+//fonts
+@import "layout/fonts";
+//mixins
+@import "helpers/mixins";
+
+//layout setups
+@import "layout/setups";
+
+
+
+@import "blocks/about";
+@import "blocks/down-arrow";
+@import "blocks/hero";
+@import "blocks/section-title";
+@import "blocks/title";
+@import "blocks/triangle";
+@import "blocks/user";
+@import "blocks/skills";
+@import "blocks/footer";
+@import "blocks/socials";
+@import "blocks/auth";
+@import "blocks/works-head";
+@import "blocks/slider";
+@import "blocks/feedback";
+@import "blocks/blog";
+@import "blocks/parallax";

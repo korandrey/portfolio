@@ -1,0 +1,44 @@
+.about {
+  @extend %clearfix;
+  display: inline-flex;
+  position: relative;
+  z-index: 3;
+}
+
+.about__left, .about__right {
+  float: left;
+  width: 50%;
+  position: relative;
+}
+
+.about__left {
+  background: $white;
+}
+
+.about__right {
+  background: $beige;
+}
+
+.about__triangles {
+  position: absolute;
+  bottom: 100%;
+}
+.about-title{
+  font-family: Sansus-Webissimo-Regular;
+  display: inline-block;
+  width:50%;
+}
+
+.about-user-info__title{
+  width: 345px;
+  display: inline-block;
+}
+
+.about-user-info__text{
+  font-size: 16px;
+  font-family: Roboto-Regular;
+  padding: 50px;
+}
+
+
+

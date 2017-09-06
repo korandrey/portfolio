@@ -1,0 +1,46 @@
+.works-head {
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	width: 100%;
+}
+
+.works-head__triangle {
+	fill: #161a29;
+	opacity: 0.9;
+	position: absolute;
+	//bottom: 10%;
+	width: 55%;
+	height: 200px;
+}
+
+.works-head__triangle_left {
+	left: 0;
+}
+
+.works-head__triangle_right {
+	right: 0;
+}
+
+.section-title{
+	color: white;
+	font-size: 63px;
+	//@include bernier();
+	padding: 45px 80px;
+	display: inline-block;
+	position: relative;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	$margin : 40px;
+	font-family: Roboto-Medium;
+}
+
+.works-head__title{
+	position: relative;
+	top:-160px;
+}
+
+.title-text{
+	color: $white;
+}

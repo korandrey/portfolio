@@ -1,0 +1,248 @@
+.footer {
+  width: $common-width;
+  height: 185px;
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  background-color: #3d3f47;
+  color: #a3a6a8;
+  z-index: 10;
+
+  @include laptops {
+    height: 273px;
+  }
+
+  @include phones {
+    min-height: 355px;
+  }
+}
+
+.footer-top {
+  width: $common-width;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  @include widescreen {
+    justify-content: space-around;
+  }
+
+
+  @include laptops {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+.footer-top__column {
+  display: inline-block;
+  width: 500px;
+  height: 87px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  max-width: 650px;
+  border-right: none;
+  border-left: 1px solid #757a7d;
+
+  &:first-child {
+    border-left: 0;
+  }
+
+
+  @include widescreen {
+    width: 600px;
+
+    & p.column__text {
+      width: 450px;
+    }
+
+    & div.column__text {
+      width: 550px;
+    }
+  }
+
+  @include laptops {
+    min-height: 73px;
+    text-align: left;
+    margin-bottom: 15px;
+    width: 330px;
+    flex-grow: 1;
+    max-width: 100%;
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+      border-right: 0;
+    }
+
+    &:last-child {
+      width: 100%;
+      padding-left: 20px;
+
+      & .column__text {
+        width: 720px;
+      }
+    }
+  }
+
+  @include phones {
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #757a7d;
+
+    &:first-child {
+      padding: 15px;
+    }
+
+
+    &:last-child {
+      width: 95%;
+      padding-left: 0;
+      margin-bottom: 15px;
+      border-bottom: 0;
+
+      & .column__text {
+        width: 90%;
+      }
+    }
+  }
+
+  @include min-size {
+    width: 100%;
+
+    &:last-child {
+      height: 95px;
+    }
+  }
+}
+
+.column__text {
+  color: #9d9ea1;
+  width: 330px;
+  font-family: 'Roboto Light';
+  line-height: 1.625;
+
+  @include phones {
+    width: 90%;
+    height: 90px;
+  }
+
+}
+
+.navigation__footer {
+  width: 370px;
+  margin-bottom: 25px;
+
+  & .navigation__list {
+
+    & .navigation__item {
+      display: inline-block;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & .navigation__link {
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+          color: #2c58a3;
+        }
+      }
+    }
+  }
+
+  @include phones {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.socials__footer {
+
+  & .social__item {
+    display: inline-block;
+
+    & .social__link {
+
+      & .social__icon {
+        width: 2.3875rem;
+        height: 1.8625rem;
+        vertical-align: middle;
+        margin-right: 1.5625rem;
+        cursor: pointer;
+        fill: #a1a7a5;
+
+
+        &:hover {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+.quote-text {
+  font-family: 'Roboto-Italic';
+
+}
+
+.quote-author {
+  font-family: 'Roboto-Italic';
+}
+
+.footer-bottom {
+  font-family: 'Roboto Light';
+  height: 38px;
+  background-color: #2c58a3;
+  color: #dde8d9;
+  text-align: center;
+  padding: 10px;
+
+  @include tablets {
+    height: 66px;
+  }
+}
+
+.footer-bottom__text-name,
+.footer-bottom__text-love,
+.footer-bottom__text-year {
+  display: inline-block;
+  border-right: 1px solid white;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.footer-bottom__text-name {
+  @include phones {
+    border-right: 0;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
+.footer-bottom__text-love,
+.footer-bottom__text-year {
+  @include phones {
+    padding-right: 5px;
+    margin-right: 5px;
+  }
+}
+
+.footer-bottom__text-year {
+  border-right: 0;
+}
+
